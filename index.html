@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Auth Section -->
+  <div id="auth-container">
+    <h2 id="auth-title">Sign Up</h2>
+    <input type="email" id="auth-email" placeholder="Email" />
+    <input type="password" id="auth-password" placeholder="Password" />
+    <button onclick="handleAuth()">Sign Up</button>
+    <p id="toggle-text" onclick="toggleAuth()">Already have an account?</p>
+  </div>
+
+  <!-- Main Task Section -->
+  <div id="main-container" style="display: none;">
+    <div class="top-bar">
+      <h2 id="greeting"></h2>
+      <button onclick="logoutUser()">Logout</button>
+    </div>
+
+    <div class="task-controls">
+      <input type="text" id="task-input" placeholder="Enter a task..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search tasks..." />
+      <button onclick="searchTasks()">Search</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
